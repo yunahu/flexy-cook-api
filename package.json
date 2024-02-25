@@ -1,0 +1,28 @@
+{
+  "name": "flexy-cook-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon .",
+		"start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunahu/flexy-cook-api.git"
+  },
+  "keywords": [],
+  "author": "Yuna Hu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yunahu/flexy-cook-api/issues"
+  },
+  "homepage": "https://github.com/yunahu/flexy-cook-api#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.1.0"
+  }
+}
