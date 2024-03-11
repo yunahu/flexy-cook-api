@@ -34,10 +34,6 @@ spoonacularAPI.interceptors.response.use(response => response.data,
 	error => Promise.reject(error)
 );
 
-app.get('/test', async (req, res) => {
-	res.status(200).send('hello!');
-})
-
 app.get('/spoonacular/searchRecipe', async (req, res) => {
 	try {
 		const data = await spoonacularAPI.get('/complexSearch', { params: req.query });
@@ -63,5 +59,37 @@ app.get('/spoonacular/getRecipe', async (req, res) => {
 	}
 })
 
+app.get('/spoonacular/getRecipeTaste', async (req, res) => {
+	if (req.query.id === undefined || req.query.normalize === undefined) {
+		res.status(401).send('Not enough params');
+		return;
+	}
+
+	try {
+		const data = await spoonacularAPI.get(`/${req.query.id}/tasteWidget.json`, { params: req.query });
+		res.status(200).json(data);
+	} catch (err) {
+		console.log(err);
+		res.status(400).send(err);
+	}
+})
+
+app.get('/spoonacular/randomRecipe', async (req, res) => {
+	// if (number === undefined) {
+	// 	res.status(401).send('Not enough params');
+	// 	return;
+	// }
+	// limitLicense = undefined,
+	// include_tags = undefined,
+	// exclude_tags = undefined,
+
+	try {
+		const data = await spoonacularAPI.get('/random', { params: req.query });
+		res.status(200).json(data);
+	} catch (err) {
+		console.log(err);
+		res.status(400).send(err);
+	}
+})
 
 app.listen(process.env.PORT, () => console.log(`Listening on http://localhost:${process.env.PORT}`));
