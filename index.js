@@ -92,4 +92,8 @@ app.get('/spoonacular/randomRecipe', async (req, res) => {
 	}
 })
 
+app.get('/ping', async (req, res) => {
+	res.send('pong');
+})
+
 app.listen(process.env.PORT, () => console.log(`Listening on http://localhost:${process.env.PORT}`));
