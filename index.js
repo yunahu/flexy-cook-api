@@ -2,11 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
+const morgan = require('morgan');
 
 const app = express();
 
-app.use(cors())
+app.use(cors());
 app.use(express.json());
+app.use(morgan("tiny"));
 
 app.post('/todoist_token', async (req, res) => {
 	try {
@@ -16,6 +18,7 @@ app.post('/todoist_token', async (req, res) => {
 		res.send(response.data.access_token);
 	} catch (err) {
 		console.error(err.message);
+		res.status(500).send(err.message);
 	}
 });
 

@@ -133,3 +133,4 @@ dist
 .env* 
 !.env.sample
 .ssh
+.DS_Store
