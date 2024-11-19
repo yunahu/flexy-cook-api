@@ -12,7 +12,11 @@
     "url": "git+https://github.com/yunahu/flexy-cook-api.git"
   },
   "keywords": [],
-  "author": "Yuna Hu",
+	"contributors": [
+		"Yuna Hu",
+		"Fuka Nagata",
+		"Monica Gao"
+	],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yunahu/flexy-cook-api/issues"
