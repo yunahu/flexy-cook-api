@@ -78,13 +78,6 @@ app.get('/spoonacular/getRecipeTaste', async (req, res) => {
 })
 
 app.get('/spoonacular/randomRecipe', async (req, res) => {
-	// if (number === undefined) {
-	// 	res.status(401).send('Not enough params');
-	// 	return;
-	// }
-	// limitLicense = undefined,
-	// include_tags = undefined,
-	// exclude_tags = undefined,
 
 	try {
 		const data = await spoonacularAPI.get('/random', { params: req.query });
@@ -93,10 +86,6 @@ app.get('/spoonacular/randomRecipe', async (req, res) => {
 		console.log(err);
 		res.status(400).send(err);
 	}
-})
-
-app.get('/ping', async (req, res) => {
-	res.send('pong');
 })
 
 app.listen(process.env.PORT, () => console.log(`Listening on http://localhost:${process.env.PORT}`));
