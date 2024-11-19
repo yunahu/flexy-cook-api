@@ -1,4 +1,5 @@
 # FlexyCook API
+By Yuna Hu, Fuka Nagata, Monica Gao
 
 #### *This API is built to enhance the security of FlexyCook web application*
 
@@ -10,5 +11,5 @@
 3. Run `npm run dev`.
 4. Run FlexyCook (Please refer to its own readme file.)
 
-## Link to FlexyCook Web Application: [https://production.d3ajroqntq3q3i.amplifyapp.com/](https://production.d3ajroqntq3q3i.amplifyapp.com/)
-## Link to FLexyCook repository: [https://github.com/yunahu/FlexyCook/](https://github.com/yunahu/FlexyCook/)
+## Link to FlexyCook Web Application: [https://d3djat1rz51o8y.cloudfront.net](https://d3djat1rz51o8y.cloudfront.net)
+## Link to FLexyCook repository: [https://github.com/yunahu/flexy-cook](https://github.com/yunahu/flexy-cook)
